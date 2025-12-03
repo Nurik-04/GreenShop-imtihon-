@@ -1,0 +1,2240 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1300px;
+    background-color: gainsboro;
+    margin: 0 auto;
+    /* padding-bottom: 70px; */
+}
+/* ---------------------------------------header */
+.header{
+    position: fixed;
+    z-index: 999;
+    backdrop-filter: blur(20px);
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    padding: 0 20px;
+}
+.header__img{
+    width: 150px;
+    height: 34px;
+}
+.header__img:hover{
+    filter: drop-shadow(1px 1px 20px #46A358); 
+}
+.header__list{
+    width: 351px;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 451px;
+    height: 45px;
+}
+.header__item{
+    width: 77px;
+    height: 100%;
+    text-align: center;
+    color: #000;
+}
+.header__item:hover{
+    transition: all 0.2s;
+    border-bottom: 3px solid #46A358;
+}
+.header__link{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    word-spacing: 2px;
+    line-height: 100%;
+    color: #3D3D3D;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+.header__link:hover{
+    font-weight: 700;
+    transition: all 0.5s;
+}
+.header__box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 209px;
+    height: 35px;
+}
+.headeer__icon{
+    font-size: 25px;
+    display: inline-block;
+    color: #3D3D3D;
+}
+.headeer__icon:hover{
+    color: #46A358;
+    transition: all 0.5s;
+}
+.headeer__btn{
+    width: 100px;
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+    background: #46A358;
+    color: #FFFFFF;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+}
+/* Responsive o'zgarishlar */
+@media only screen and (max-width: 1024px) {
+    .header__nav {
+        padding: 0 15px;
+    }
+    
+    .header__list {
+        width: 400px;
+    }
+    
+    .header__box {
+        width: 190px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header__nav {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 15px;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .header__img {
+        order: 1;
+        width: 130px;
+        height: 30px;
+    }
+    
+    .header__list {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    
+    .header__item {
+        width: auto;
+        padding: 0 10px;
+    }
+    
+    .header__box {
+        order: 2;
+        width: 180px;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .header__link {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header__nav {
+        padding: 8px 10px;
+        gap: 10px;
+    }
+    
+    .header__img {
+        width: 120px;
+        height: 27px;
+    }
+    
+    .header__list {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px 5px;
+        height: auto;
+        padding: 5px 0;
+    }
+    
+    .header__item {
+        width: auto;
+        min-width: 70px;
+    }
+    
+    .header__link {
+        font-size: 13px;
+        word-spacing: 1px;
+    }
+    
+    .header__box {
+        width: 160px;
+        gap: 15px;
+    }
+    
+    .headeer__icon {
+        font-size: 22px;
+    }
+    
+    .headeer__btn {
+        width: 90px;
+        height: 32px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .header__list {
+        justify-content: space-around;
+        gap: 5px;
+    }
+    
+    .header__item {
+        width: 70px;
+    }
+    
+    .header__box {
+        width: 150px;
+        gap: 12px;
+    }
+    
+    .headeer__btn {
+        width: 80px;
+        font-size: 13px;
+    }
+}
+
+/* Mobil menyu uchun qo'shimcha */
+@media only screen and (max-width: 768px) {
+    /* AOS animatsiyalarni mobilda optimallashtirish */
+    [data-aos] {
+        transition-duration: 1000ms !important;
+    }
+    
+    /* Mobil qurilmalar uchun hover effektlarni moslash */
+    @media (hover: none) {
+        .header__item:hover {
+            border-bottom: none;
+        }
+        
+        .header__link:hover {
+            font-weight: 400;
+        }
+        
+        .headeer__icon:hover {
+            color: #3D3D3D;
+        }
+        
+        .header__img:hover {
+            filter: none;
+        }
+    }
+}
+
+/* Tabletlar uchun maxsus sozlamalar */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .header__nav {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        height: 55px;
+    }
+    
+    .header__img {
+        order: 1;
+        flex: 1;
+    }
+    
+    .header__list {
+        order: 2;
+        width: auto;
+        margin-top: 0;
+        flex: 2;
+        justify-content: center;
+    }
+    
+    .header__box {
+        order: 3;
+        flex: 1;
+        justify-content: flex-end;
+    }
+}
+/* -------------------------------------------------head */
+.head__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    height: 500px;
+    border: 1px solid #46A358;
+    margin-left: 50px;
+    padding: 0 20px;
+    background: linear-gradient(-170deg, #849b5c, #bfffc7);
+    margin-top: 55px;
+    border-radius: 30px;
+}
+.head__box{
+    width: 530px;
+    height: 297px;
+}
+.head__welkom{
+    width: 205px;
+    height: 16px;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 10%;
+    text-transform: uppercase;
+    color: #3D3D3D;
+    margin-bottom: 7px;
+}
+.head__title{
+    width: 650px;
+    height: 140px;
+    font-family: sans-serif ;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: #3D3D3D;
+    margin-bottom: 5px;
+}
+.head__span{
+    font-family: sans-serif ;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: #46A358;
+}
+.head__text{
+    width: 100%;
+    height: 45px;
+    font-family: Cera Pro;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #727272;
+    margin-bottom: 44px;
+}
+.head__btn{
+    width: 140px;
+    height: 40px;
+    border-radius: 6px;
+    background: #46A358;
+    font-family: sans-serif ;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: none;
+}
+.head__imges{
+    width: 450px;
+    height: 450px;
+    position: relative;
+}
+.head__img{
+    width: 100%;
+    height: 100%;
+}
+.head__img:hover{
+    filter: drop-shadow(1px 1px 20px #49e468);
+}
+.head__img__two{
+    width:  135px;
+    height: 135px;
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+    filter: drop-shadow(1px 1px 20px #46A358);
+}
+/* Head section uchun responsive o'zgarishlar */
+
+/* Katta ekranlar uchun moslashuv */
+@media only screen and (min-width: 1201px) {
+    .head__container {
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Kichik kompyuter va tabletlar (1024px - 1200px) */
+@media only screen and (max-width: 1200px) {
+    .head__container {
+        width: 95%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 30px;
+        height: auto;
+        min-height: 500px;
+    }
+    
+    .head__box {
+        width: 45%;
+        min-width: 400px;
+        height: auto;
+        padding-right: 20px;
+    }
+    
+    .head__title {
+        width: 100%;
+        font-size: 60px;
+        line-height: 60px;
+        height: auto;
+    }
+    
+    .head__span {
+        font-size: 60px;
+        line-height: 60px;
+    }
+    
+    .head__imges {
+        width: 40%;
+        min-width: 350px;
+        height: 400px;
+    }
+    
+    .head__text {
+        height: auto;
+        min-height: 45px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Tablet rejimi (768px - 1024px) */
+@media only screen and (max-width: 1024px) {
+    .head__container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: auto;
+        padding: 40px 20px;
+        margin-top: 70px;
+    }
+    
+    .head__box {
+        width: 100%;
+        max-width: 600px;
+        min-width: auto;
+        padding-right: 0;
+        margin-bottom: 40px;
+        height: auto;
+    }
+    
+    .head__welkom {
+        margin: 0 auto 10px;
+    }
+    
+    .head__title {
+        font-size: 55px;
+        line-height: 55px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+    
+    .head__span {
+        font-size: 55px;
+        line-height: 55px;
+    }
+    
+    .head__text {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 30px;
+        height: auto;
+        padding: 0 10px;
+    }
+    
+    .head__imges {
+        width: 100%;
+        max-width: 500px;
+        min-width: auto;
+        height: 400px;
+        margin: 0 auto;
+    }
+    
+    .head__img__two {
+        width: 120px;
+        height: 120px;
+        left: 10%;
+        bottom: 10%;
+    }
+}
+
+/* Katta mobil telefonlar (480px - 768px) */
+@media only screen and (max-width: 768px) {
+    .head__container {
+        padding: 30px 15px;
+        margin-top: 85px;
+    }
+    
+    .head__box {
+        max-width: 100%;
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+    
+    .head__title {
+        font-size: 45px;
+        line-height: 45px;
+        margin-bottom: 20px;
+    }
+    
+    .head__span {
+        font-size: 45px;
+        line-height: 45px;
+    }
+    
+    .head__text {
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 25px;
+        padding: 0;
+    }
+    
+    .head__imges {
+        height: 350px;
+        max-width: 400px;
+    }
+    
+    .head__img__two {
+        width: 100px;
+        height: 100px;
+        left: 5%;
+        bottom: 5%;
+    }
+    
+    .head__btn {
+        width: 130px;
+        height: 38px;
+        font-size: 15px;
+    }
+}
+
+/* Kichik mobil telefonlar (320px - 480px) */
+@media only screen and (max-width: 480px) {
+    .head__container {
+        padding: 25px 10px;
+        margin-top: 95px;
+    }
+    
+    .head__box {
+        padding: 0 5px;
+    }
+    
+    .head__welkom {
+        font-size: 12px;
+        width: auto;
+        height: auto;
+        margin-bottom: 8px;
+    }
+    
+    .head__title {
+        font-size: 35px;
+        line-height: 38px;
+        margin-bottom: 15px;
+    }
+    
+    .head__span {
+        font-size: 35px;
+        line-height: 38px;
+    }
+    
+    .head__text {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+    
+    .head__imges {
+        height: 280px;
+        max-width: 300px;
+    }
+    
+    .head__img__two {
+        width: 80px;
+        height: 80px;
+        left: 3%;
+        bottom: 3%;
+    }
+    
+    .head__btn {
+        width: 120px;
+        height: 36px;
+        font-size: 14px;
+    }
+}
+
+/* Juda kichik ekranlar (max-width: 320px) */
+@media only screen and (max-width: 320px) {
+    .head__container {
+        padding: 20px 5px;
+    }
+    
+    .head__title {
+        font-size: 30px;
+        line-height: 32px;
+    }
+    
+    .head__span {
+        font-size: 30px;
+        line-height: 32px;
+    }
+    
+    .head__text {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    
+    .head__imges {
+        height: 250px;
+        max-width: 270px;
+    }
+    
+    .head__img__two {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* AOS animatsiyalarni optimallashtirish */
+@media only screen and (max-width: 768px) {
+    .head__container [data-aos] {
+        transition-duration: 1500ms !important;
+    }
+    
+    .head__title[data-aos] {
+        transition-duration: 1200ms !important;
+    }
+    
+    .head__text[data-aos] {
+        transition-duration: 1000ms !important;
+    }
+    
+    .head__btn[data-aos] {
+        transition-duration: 800ms !important;
+    }
+}
+
+/* Touch qurilmalar uchun hover effektlarni optimallashtirish */
+@media (hover: none) {
+    .head__img:hover {
+        filter: none;
+    }
+}
+
+/* Yuklanish jarayonida chiroyli ko'rinish */
+@media only screen and (max-width: 768px) {
+    .head__container {
+        background: linear-gradient(-170deg, #849b5c, #bfffc7);
+        border: 1px solid #46A358;
+    }
+}
+/* ---------------------------------------------------section-- */
+.section__container{
+    width: 100%;
+    height: 1444px;
+    /* padding-top: 60px; */
+    padding: 60px 0;
+}
+.section__container__box{
+    width: 1200px;
+    height: 1244px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+/*  */
+.cps-s__box{
+    width: 310px;
+    height: 100%;
+    padding-top: 14px;
+    background-color: #FBFBFB;
+    border: 1px solid #46A358;
+    border-radius: 30px;
+}
+/*  */
+.categories{
+    width:  268px;
+    height: 383px;
+    margin-left: 18px;
+    margin-bottom: 36px;
+}
+.categories__title{
+    font-family: sans-serif ;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 16px;
+    margin-bottom: 7px;
+    color: #3D3D3D;
+}
+.categories__text__box{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-family: sans-serif ;
+    font-size: 15px;
+    line-height: 40px;
+    margin-left: 12px;
+}
+.categories__text{
+    color: #3D3D3D;
+    font-weight: 400;
+}
+.categories__nomber{
+    color: #3D3D3D;
+    font-weight: 400;
+}
+/* price */
+.price{
+    width:  226px;
+    height: 133px;
+    margin-left: 18px;
+    margin-bottom: 46px;
+}
+.price__title{
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 16px;
+    margin-bottom: 20px;
+}
+.price__input{
+    /* color: #46A358;
+    background-color: #46A358; */
+    margin-left: 12px;
+    width: 90%;
+    margin-bottom: 15px;
+}
+.price__text{
+    font-family: sans-serif ;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    color: #3D3D3D;
+    margin-bottom: 16px;
+    margin-left: 12px;
+}
+.price__span{
+    font-family: sans-serif ;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 16px;
+    color: #46A358;
+}
+.price__btn{
+    width:  90px;
+    height: 35px;
+    border-radius: 6px;
+    background: #46A358;
+    border: none;
+    margin-left: 12px;
+    color: #FFFFFF;
+    font-family: sans-serif ;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+}
+/* size */
+.size{
+    width:  268px;
+    height: 143px;
+    margin-left: 18px;
+    margin-bottom: 19px;
+}
+.size__title{
+    font-family:  sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 16px;
+    margin-bottom: 7px;
+}
+.size__box{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 12px;
+}
+.size__text{
+    width: 56px;
+    height:   120px;
+    color: #3D3D3D;
+    font-family: sans-serif ;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 40px;
+}
+.size__nomber{
+    width:   30px;
+    height: 120px;
+    font-family: Cera Pro;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 40px;
+    text-align: right;
+    color: #3D3D3D;
+}
+/* super */
+.super{
+    width:  310px;
+    height: 470px;
+    background: linear-gradient(180deg, rgba(70, 163, 88, 0.1) 0%, rgba(70, 163, 88, 0.03) 100%);
+    text-align: center;
+    align-content: center;
+    border: 1px dashed #46A358;
+}
+.super__title{
+    font-family: sans-serif ;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 16px;
+    color: #3D3D3D;
+}
+.super__img__two{
+    width: 100%;
+    height: 360px;
+    mix-blend-mode: multiply;
+}
+/*----------------------shop__box---*/
+.shop__box{
+    width: 840px;
+    height: 1244px;
+    background-color: #FFFFFF;
+    border: 1px solid #46A358;
+}
+.shop__list{
+    width: 100%;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 31px;
+    margin-top: 5px;
+    border-radius: 30px;
+}
+.shop__item{
+    width: 258px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.shop__text{
+    font-family: sans-serif ;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    color: #3D3D3D;
+}
+.shop__text:hover{
+    font-family: sans-serif ;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 16px;
+    color:  #46A358;
+    padding-bottom: 7px;
+    border-bottom: 2px solid #46A358;
+    transition: all 0.3s;
+}
+.shop__form{
+    width: 185px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.shop__lebel{
+    font-family: sans-serif ;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    color: #3D3D3D;
+}
+.shop__select{
+    width: 124px;
+    border: none;
+}
+.shop__list__two{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: linear-gradient(-170deg, #6be68e, #6cc6cb);
+}
+.shop__item__two{
+    width: 258px;
+    height: 350px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+.shop__item__two:hover {
+    filter: drop-shadow(1px 1px 20px #49e468);
+}
+.item__two__img{
+    width:  250px;
+    height: 250px;
+    background-color: #FBFBFB;
+    margin-bottom: 40px;
+    mix-blend-mode: Multiply;
+    filter: brightness(0.9);
+    border-radius: 35px;
+}
+.item__two__text{
+    text-align: left;
+    font-family: sans-serif ;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #3D3D3D;
+    margin-bottom: 6px;
+    padding-left: 20px;
+}
+.item__two__text__price{
+    font-family: sans-serif ;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 16px;
+    color: #46A358;
+    text-align: left;
+    padding-left: 20px;
+}
+/* ---------------------------------------more--------------- */
+.more{
+    width: 1200px;
+    height: 302px;  
+    margin-left: 50px;
+}
+.more__list{
+    width: 100%;
+    height: 250px;
+    display: flex;  
+    justify-content: space-between;
+}
+.more__item{
+    width: 586px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #46A358; 
+    background-color: #FFFFFF;   
+    border-radius: 30px;
+}
+.more__img{
+    width: 245px;
+    height: 245px;
+    border-radius: 30px;
+}
+.more__box{
+    margin-right: 30px;
+    text-align: right;
+}
+.more__title{
+    font-family: sans-serif ;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #3D3D3D;
+    margin-bottom: 15px;
+}
+.more__text{
+    font-family: sans-serif ;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #3D3D3D;
+    margin-bottom: 15px;
+}
+.more__btn{
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background: #46A358;
+    color: #FFFFFF;
+    font-family: sans-serif ;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+/* ------------------------------------------------------------ */
+.blog{
+    width: 1200px;
+    height: 547px;
+    /* background-color: #FFFFFF; */
+    background: linear-gradient(0deg, #6be68e, #6cc6cb);
+    margin-left: 50px;
+    text-align: center;
+    padding-top: 20px;
+    border: 1px solid #46A358;
+}
+.blog__title{
+    font-family: sans-serif ;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 16px;
+    color: #3D3D3D;
+    margin-bottom: 15px;
+}
+.blog__text{
+    font-family: sans-serif ;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 25px;
+}
+.blog__list{
+    display: flex;
+    justify-content: space-between;
+    height: 350px;
+    
+}
+.blog__item{
+    width: 268px;
+    height: 362px;
+    background: #FBFBFB;
+    border: 1px solid #46A358;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.blog__item:hover{
+    transition: 0.3s all ;
+    transform: scale(1.1) translate();
+}
+.blog__img{
+    width:  265px;
+    height: 192px;
+}
+.blog__box{
+    width:  268px;
+    height: 160px;
+    border-top: 1px dashed #46A358;
+    padding: 9px 13px 12px 13px;
+    text-align: left;
+    margin-top: -11px;
+}
+.blog__item__data{
+    font-family: sans-serif ;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #46A358;
+    margin-bottom: 4px;
+}
+.blog__item__title{
+    font-family: sans-serif ;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #3D3D3D;
+    margin-bottom: 4px;
+}
+.blog__item__text{
+    font-family: sans-serif ;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #727272;
+    margin-bottom: 7px;
+}
+/* Section Container uchun responsive o'zgarishlar */
+
+/* 1. Katta ekranlar uchun moslashuv (1201px+) */
+@media only screen and (min-width: 1201px) {
+    .section__container__box,
+    .more,
+    .blog {
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* 2. Kichik kompyuter va katta tabletlar (1024px - 1200px) */
+@media only screen and (max-width: 1200px) {
+    .section__container {
+        height: auto;
+        padding: 40px 0;
+    }
+    
+    .section__container__box {
+        width: 95%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        flex-direction: column;
+    }
+    
+    .cps-s__box {
+        width: 100%;
+        max-width: 310px;
+        height: auto;
+        margin: 0 auto 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+    }
+    
+    .categories,
+    .price,
+    .size {
+        width: 45%;
+        min-width: 250px;
+        margin: 0 10px 30px;
+    }
+    
+    .super {
+        width: 100%;
+        max-width: 310px;
+        height: auto;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+    
+    .shop__box {
+        width: 100%;
+        max-width: 840px;
+        height: auto;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .more {
+        width: 95%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        padding: 0 10px;
+    }
+    
+    .blog {
+        width: 95%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        padding: 20px 10px;
+    }
+}
+
+/* 3. Tablet rejimi (768px - 1024px) */
+@media only screen and (max-width: 1024px) {
+    .section__container {
+        padding: 30px 0;
+    }
+    
+    .cps-s__box {
+        max-width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    
+    .categories,
+    .price,
+    .size {
+        width: 30%;
+        min-width: 200px;
+        margin: 0 5px 20px;
+    }
+    
+    .categories__text__box,
+    .size__box {
+        margin-left: 0;
+    }
+    
+    .shop__list {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+    
+    .shop__item {
+        width: 100%;
+        margin-bottom: 15px;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    
+    .shop__form {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    
+    .shop__list__two {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .shop__item__two {
+        width: 45%;
+        min-width: 220px;
+        height: auto;
+        margin-bottom: 40px;
+    }
+    
+    .item__two__img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 20px;
+    }
+    
+    .more__list {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 20px;
+    }
+    
+    .more__item {
+        width: 100%;
+        max-width: 586px;
+        height: auto;
+        padding: 15px;
+    }
+    
+    .more__img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .blog__list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        height: auto;
+    }
+    
+    .blog__item {
+        width: 45%;
+        min-width: 250px;
+        height: auto;
+    }
+}
+
+/* 4. Katta mobil telefonlar (480px - 768px) */
+@media only screen and (max-width: 768px) {
+    .section__container__box {
+        padding: 0 10px;
+    }
+    
+    .cps-s__box {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+    }
+    
+    .categories,
+    .price,
+    .size {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto 25px;
+    }
+    
+    .categories__title,
+    .price__title,
+    .size__title {
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .shop__item__two {
+        width: 48%;
+        min-width: 180px;
+        margin-bottom: 30px;
+    }
+    
+    .item__two__img {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .item__two__text {
+        font-size: 14px;
+        padding-left: 10px;
+    }
+    
+    .item__two__text__price {
+        font-size: 16px;
+        padding-left: 10px;
+    }
+    
+    .more__item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .more__img {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 15px;
+    }
+    
+    .more__box {
+        text-align: center;
+        margin-right: 0;
+    }
+    
+    .more__title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    .more__text {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    
+    .blog__title {
+        font-size: 24px;
+    }
+    
+    .blog__text {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+    
+    .blog__item {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .blog__box {
+        padding: 10px;
+    }
+    
+    .blog__item__title {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+/* 5. Kichik mobil telefonlar (320px - 480px) */
+@media only screen and (max-width: 480px) {
+    .section__container {
+        padding: 20px 0;
+    }
+    
+    .cps-s__box {
+        padding: 15px 5px;
+    }
+    
+    .shop__item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        height: auto;
+    }
+    
+    .shop__text {
+        font-size: 13px;
+        margin-right: 10px;
+    }
+    
+    .shop__form {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        height: auto;
+    }
+    
+    .shop__item__two {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .item__two__img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .more__item {
+        padding: 15px 10px;
+    }
+    
+    .more__img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .more__btn {
+        width: 120px;
+        height: 36px;
+        font-size: 14px;
+    }
+    
+    .blog {
+        padding: 15px 5px;
+    }
+    
+    .blog__title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .blog__text {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .blog__img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .blog__box {
+        width: 100%;
+        padding: 8px;
+    }
+    
+    .blog__item__data {
+        font-size: 12px;
+    }
+    
+    .blog__item__title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    .blog__item__text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+/* 6. Juda kichik ekranlar (max-width: 320px) */
+@media only screen and (max-width: 320px) {
+    .shop__item__two {
+        max-width: 220px;
+    }
+    
+    .item__two__img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .more__img {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .more__title {
+        font-size: 15px;
+    }
+    
+    .more__text {
+        font-size: 12px;
+    }
+    
+    .more__btn {
+        width: 110px;
+        height: 34px;
+    }
+    
+    .blog__item {
+        max-width: 280px;
+    }
+    
+    .blog__img {
+        width: 100%;
+        height: 180px;
+    }
+}
+
+/* 7. AOS animatsiyalarni optimallashtirish */
+@media only screen and (max-width: 768px) {
+    [data-aos] {
+        transition-duration: 1000ms !important;
+    }
+}
+
+/* 8. Touch qurilmalar uchun hover effektlarni optimallashtirish */
+@media (hover: none) {
+    .shop__item__two:hover {
+        filter: none;
+    }
+    
+    .shop__text:hover {
+        font-weight: 400;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+}
+
+/* 9. Form elementlarni mobil uchun optimallashtirish */
+@media only screen and (max-width: 480px) {
+    .price__input {
+        width: 95%;
+    }
+    
+    .shop__select {
+        width: 100px;
+    }
+    
+    input[type="range"] {
+        height: 6px;
+    }
+}
+
+/* 10. Super section uchun maxsus moslashuv */
+@media only screen and (max-width: 1024px) {
+    .super__img__two {
+        height: 300px;
+        object-fit: contain;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .super {
+        padding: 15px;
+    }
+    
+    .super__title {
+        font-size: 20px;
+    }
+    
+    .super__img__two {
+        height: 250px;
+    }
+}
+/* -------------------------------------------------------------footer */
+.footer__container{
+    width: 100%;
+    height: 774px;
+    padding-left: 50px;
+    padding-top: 100px;
+}
+.footer__nav{
+    width: 1200px;
+    height: 588px;
+    /* background-color: #FBFBFB; */
+    border-radius: 30px;
+}
+.footer__list{
+    width: 100%;
+    height: 250px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #46A358;
+    background: linear-gradient(170deg, #f3e9e8, #96b9d9);
+    border-radius: 30px;
+}
+.footer__item{
+    width : 204px;
+    height: 196px;
+    border: 1px dashed gainsboro;
+    align-content: end;
+}
+.f__imges{
+    width:  74px;
+    height: 74px;
+    border-radius: 50%;
+    border: 1px solid #46A358;
+    background: #46A35821;
+    margin-bottom: 15px;
+    position: relative;
+}
+.footer__img{
+    width: 61px;
+    height: 46px;
+    position: absolute;
+    top: -20px;
+    right: -5px;
+}
+.footer__img1{
+    width:  55px;
+    height: 48px;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+}
+.footer__img2{
+    width:  68px;
+    height: 87px;
+    position: absolute;
+    top: -16px;
+    right: -10px;
+}
+.footer__img3{
+    width:  83px;
+    height: 85px;
+    position: absolute;
+    top: -13px;
+    right: -16px;
+}
+.footer__title{
+    font-family: sans-serif ;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 16px;
+    color: #3D3D3D;
+}
+.footer__text{
+    width: 204px;
+    height: 66px;
+    font-family: sans-serif ;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 8px;
+    color: #727272;
+}
+.footer__form{
+    width: 354px;
+    height: 180px;
+}
+.footer__label{
+    font-family: sans-serif ;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 16px;
+    color: #3D3D3D;
+}
+.footer__input{
+    width: 354px;
+    height: 40px;
+    border-radius: 6px;
+    padding-left: 20px;
+    font-family: sans-serif ;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 16px;
+    margin-top: 18px;
+    margin-bottom: 17px;
+    border: 2px dashed gainsboro;
+}
+.footer__form__text{
+    width: 354px;
+    height: 89px;
+    font-family: sans-serif ;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 22px;
+    color: #727272;
+}
+.footer__box{
+    width: 100%;
+    height: 88px;
+    background: #e8f5c8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    padding-right: 250px;
+    border-radius: 30px;
+}
+.footer__logo__img{
+    width: 150px;
+    height: 34px;
+}
+.footer__box__text{
+    width: 176px;
+    height: 44px;
+    font-family: sans-serif ;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #3D3D3D;
+}
+.footer__box__link{
+    font-family: sans-serif ;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #3D3D3D;
+}
+.footer__box__text__two{
+    font-family: sans-serif ;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #3D3D3D;
+}
+.footer__box__two{
+    width: 354px;
+    height: 180px;
+}
+.footer__item__two{
+    width:  204px;
+    height: 201px;
+    border: 1px solid gainsboro;
+}
+.f__links{
+    margin-top: 20px;
+    font-family: sans-serif ;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    
+}
+.footer__link{
+   color: #3D3D3D; 
+}
+.footer__box__two{
+    width: 354px;
+    height: 180px;
+}
+.footer__network{
+    width: 150px;
+    height: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 33px;
+}
+.footer__network__link{
+    width:  30px;
+    height: 30px;
+    border-radius: 4px;
+    border: 2px solid #46A35833;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+}
+.footer__icon{
+    font-size: 16px;
+    color: #46A35899;
+}
+.footer__img__two{
+    margin-top: 13px;
+    width: 224px;
+    height: 26px;
+    mix-blend-mode: Multiply;
+}
+/* Footer uchun responsive o'zgarishlar */
+
+/* 1. Katta ekranlar uchun moslashuv (1201px+) */
+@media only screen and (min-width: 1201px) {
+    .footer__nav {
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* 2. Kichik kompyuter va katta tabletlar (1024px - 1200px) */
+@media only screen and (max-width: 1200px) {
+    .footer__container {
+        padding-left: 0;
+        padding-top: 70px;
+        height: auto;
+    }
+    
+    .footer__nav {
+        width: 95%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    
+    .footer__list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .footer__item,
+    .footer__item__two,
+    .footer__form,
+    .footer__box__two {
+        width: 45%;
+        min-width: 250px;
+        margin-bottom: 20px;
+    }
+    
+    .footer__text,
+    .footer__form__text {
+        width: 100%;
+        height: auto;
+    }
+    
+    .footer__input {
+        width: 100%;
+    }
+    
+    .footer__box {
+        padding: 0 20px;
+        padding-right: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        gap: 15px;
+    }
+    
+    .footer__box__text,
+    .footer__box__link,
+    .footer__box__text__two {
+        text-align: center;
+    }
+}
+
+/* 3. Tablet rejimi (768px - 1024px) */
+@media only screen and (max-width: 1024px) {
+    .footer__container {
+        padding-top: 50px;
+    }
+    
+    .footer__list {
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .footer__item,
+    .footer__item__two,
+    .footer__form,
+    .footer__box__two {
+        width: 48%;
+        min-width: 220px;
+    }
+    
+    .footer__title {
+        font-size: 16px;
+    }
+    
+    .footer__text {
+        font-size: 13px;
+        line-height: 20px;
+        margin-top: 5px;
+    }
+    
+    .footer__form {
+        height: auto;
+    }
+    
+    .footer__label {
+        font-size: 16px;
+    }
+    
+    .footer__input {
+        height: 36px;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 15px;
+    }
+    
+    .footer__form__text {
+        font-size: 12px;
+        line-height: 18px;
+        height: auto;
+    }
+    
+    .footer__box {
+        padding: 15px 10px;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .footer__box__text {
+        width: 100%;
+        height: auto;
+        margin: 5px 0;
+    }
+    
+    .footer__network {
+        margin: 15px auto;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+/* 4. Katta mobil telefonlar (480px - 768px) */
+@media only screen and (max-width: 768px) {
+    .footer__container {
+        padding-top: 40px;
+    }
+    
+    .footer__nav {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .footer__list {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 10px;
+        gap: 20px;
+    }
+    
+    .footer__item,
+    .footer__item__two,
+    .footer__form,
+    .footer__box__two {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .f__imges {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 10px;
+    }
+    
+    .footer__img,
+    .footer__img1,
+    .footer__img2,
+    .footer__img3 {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer__img {
+        width: 50px;
+        height: 38px;
+    }
+    
+    .footer__img1 {
+        width: 45px;
+        height: 39px;
+    }
+    
+    .footer__img2 {
+        width: 55px;
+        height: 70px;
+    }
+    
+    .footer__img3 {
+        width: 68px;
+        height: 70px;
+    }
+    
+    .footer__title {
+        text-align: center;
+        font-size: 16px;
+    }
+    
+    .footer__text {
+        text-align: center;
+        width: 100%;
+        height: auto;
+        margin: 8px auto 0;
+    }
+    
+    .footer__form {
+        height: auto;
+        padding: 15px;
+    }
+    
+    .footer__input {
+        width: 100%;
+        font-size: 18px;
+        padding-left: 10px;
+    }
+    
+    .footer__form__text {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    
+    .f__links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    .footer__link {
+        display: inline-block;
+        padding: 0 10px;
+        line-height: 25px;
+    }
+    
+    .footer__box__two {
+        text-align: center;
+    }
+    
+    .footer__network {
+        margin: 15px auto;
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .footer__img__two {
+        width: 200px;
+        height: auto;
+        margin: 10px auto 0;
+        display: block;
+    }
+}
+
+/* 5. Kichik mobil telefonlar (320px - 480px) */
+@media only screen and (max-width: 480px) {
+    .footer__container {
+        padding-top: 30px;
+    }
+    
+    .footer__list {
+        padding: 10px 5px;
+        gap: 15px;
+    }
+
+    .footer__item,
+    .footer__item__two,
+    .footer__form,
+    .footer__box__two {
+        padding: 12px 8px;
+        max-width: 100%;
+    }
+    
+    .footer__title {
+        font-size: 15px;
+    }
+    
+    .footer__text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    
+    .footer__label {
+        font-size: 15px;
+        text-align: center;
+        display: block;
+    }
+    
+    .footer__input {
+        height: 34px;
+        font-size: 16px;
+        padding-left: 8px;
+    }
+    
+    .footer__form__text {
+        font-size: 11px;
+        line-height: 16px;
+    }
+    
+    .footer__box {
+        padding: 10px 5px;
+        gap: 8px;
+    }
+    
+    .footer__logo__img {
+        width: 120px;
+        height: 27px;
+    }
+    
+    .footer__box__text,
+    .footer__box__link,
+    .footer__box__text__two {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    
+    .f__links {
+        gap: 5px;
+    }
+    
+    .footer__link {
+        font-size: 12px;
+        padding: 0 5px;
+        line-height: 22px;
+    }
+    
+    .footer__network {
+        max-width: 180px;
+    }
+    
+    .footer__network__link {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .footer__icon {
+        font-size: 14px;
+    }
+    
+    .footer__img__two {
+        width: 180px;
+        margin-top: 8px;
+    }
+}
+
+/* 6. Juda kichik ekranlar (max-width: 320px) */
+@media only screen and (max-width: 320px) {
+    .footer__item,
+    .footer__item__two,
+    .footer__form,
+    .footer__box__two {
+        padding: 10px 5px;
+    }
+    
+    .f__imges {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .footer__img {
+        width: 42px;
+        height: 32px;
+    }
+    
+    .footer__img1 {
+        width: 38px;
+        height: 33px;
+    }
+    
+    .footer__img2 {
+        width: 46px;
+        height: 58px;
+    }
+    
+    .footer__img3 {
+        width: 56px;
+        height: 58px;
+    }
+    
+    .footer__title {
+        font-size: 14px;
+    }
+    
+    .footer__text {
+        font-size: 11px;
+        line-height: 16px;
+    }
+    
+    .footer__input {
+        height: 32px;
+        font-size: 14px;
+    }
+    
+    .footer__form__text {
+        font-size: 10px;
+        line-height: 15px;
+    }
+    
+    .footer__logo__img {
+        width: 100px;
+        height: 23px;
+    }
+    
+    .footer__box__text,
+    .footer__box__link,
+    .footer__box__text__two {
+        font-size: 11px;
+        line-height: 16px;
+    }
+    
+    .footer__network {
+        max-width: 160px;
+    }
+    
+    .footer__network__link {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .footer__icon {
+        font-size: 12px;
+    }
+    
+    .footer__img__two {
+        width: 160px;
+    }
+}
+
+/* 7. Touch qurilmalar uchun optimallashtirish */
+@media (hover: none) {
+    .footer__network__link:hover {
+        background-color: transparent;
+    }
+    
+    .footer__link:hover {
+        color: #3D3D3D;
+    }
+}
+
+/* 8. Form elementlarni mobil uchun optimallashtirish */
+@media only screen and (max-width: 768px) {
+    .footer__input {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+    
+    .footer__input:focus {
+        border: 2px dashed #46A358;
+        outline: none;
+    }
+}
+
+/* 9. Footer rasmlarini optimallashtirish */
+@media only screen and (max-width: 768px) {
+    .f__imges {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footer__img,
+    .footer__img1,
+    .footer__img2,
+    .footer__img3 {
+        position: static;
+        transform: none;
+        left: auto;
+        margin: 0 auto;
+    }
+}
+
+/* 10. Footer box gradientni mobil uchun optimallashtirish */
+@media only screen and (max-width: 768px) {
+    .footer__box {
+        background: linear-gradient(135deg, #e8f5c8, #d4e8a8);
+    }
+    
+    .footer__list {
+        background: linear-gradient(170deg, #f3e9e8, #96b9d9);
+    }
+}
+
+
+
+
+
+
+
+
+
