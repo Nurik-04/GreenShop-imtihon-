@@ -1,47 +1,47 @@
 
 const data = [
     {
-        img: "../imges/li 1.png",
+        img: "./imges/li1.png",
         text: "Barberton Daisy",
         price: "$119.00"
     },
     {
-        img: "../imges/li 2.png",
+        img: "./imges/li2.png",
         text: "Angel Wing Begonia",
         price: "$169.00"
     },
     {
-        img: "../imges/li 3.png",
+        img: "./imges/li3.png",
         text: "African Violet",
         price: "$199.00",
     },
     {
-        img: "../imges/head.png",
+        img: "./imges/head.png",
         text: "Beach Spider Lily",
         price: "$129.00"
     },
     {
-        img: "../imges/li 5.png",
+        img: "./imges/li5.png",
         text: "Blushing Bromeliad",
         price: "$139.00"
     },
     {
-        img: "../imges/li 6.png",
+        img: "./imges/li6.png",
         text: "Aluminum Plant",
         price: "$179.00"
     },
     {
-        img: "../imges/li 7.png",
+        img: "./imges/li7.png",
         text: "Bird's Nest Fern",
         price: "$99.00"
     },
     {
-        img: "../imges/li 8.png",
+        img: "./imges/li8.png",
         text: "Broadleaf Lady Palm",
         price: "$59.00"
     },
     {
-        img: "../imges/li 9.png",
+        img: "./imges/li9.png",
         text: "Chinese Evergreen",
         price: "$39.00"
     },
@@ -51,10 +51,10 @@ function li() {
     setTimeout(() => {
         data.forEach((item) => {
             result += `
-            <li  data-aos="zoom-in-up"  data-aos-duration="2500" class="shop__item__two" id="shop__item__two">
-                <img class="item__two__img" id="item__two__img" src="${item.img}" alt="The product">
-                <p class="item__two__text" id="item__two__text">${item.text}</p>
-                <p class="item__two__text__price" id="item__two__text__price">${item.price}</p>
+            <li  data-aos="zoom-in-up"  data-aos-duration="2500" class="shop__item__two">
+                <img class="item__two__img"  src="${item.img}" alt="The product">
+                <p class="item__two__text">${item.text}</p>
+                <p class="item__two__text__price">${item.price}</p>
             </li>`
         })
         document.getElementById("shop__list__two").innerHTML = result
@@ -63,13 +63,13 @@ function li() {
 li()
 const data2 = [
     {
-        img2: "./imges/li 5.png",
+        img2: "./imges/li5.png",
         title: "Summer cactus & succulents",
         text2: "We are an online plant shop offering a wide range of cheap and trendy plants",
         btn: "Find More >"
     },
     {
-        img2: "./imges/li 3.png",
+        img2: "./imges/li3.png",
         title: "Styling Trends & much more",
         text2: "We are an online plant shop offering a wide range of cheap and trendy plants",
         btn: "Find More >"
